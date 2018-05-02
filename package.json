@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -14,6 +16,8 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "prettier": "^1.12.1"
+    "prettier": "^1.12.1",
+    "redux-devtools": "^3.4.1",
+    "redux-devtools-extension": "^2.13.2"
   }
 }
