@@ -1,0 +1,8 @@
+.FormLabel {
+    padding: 10px;
+}
+
+.FormLabel__text {
+    display: inline-block;
+    width: 150px;
+}
