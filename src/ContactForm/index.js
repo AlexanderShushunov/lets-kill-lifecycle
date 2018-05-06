@@ -1,4 +1,4 @@
-export {ContactForm} from './ContactForm';
+export {EnhancedContactForm as ContactForm} from './EnhancedContactForm';
 export {
     getFirstName,
     getEmployed,
