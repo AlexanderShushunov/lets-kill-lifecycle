@@ -12,12 +12,14 @@ import {reducer as formReducer} from 'redux-form';
 import {App} from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {rootSaga} from './sagas';
+import {vipStateReducer} from './vipState';
 
 const sagaMiddleware = createSagaMiddleware();
 
 let store = createStore(
     combineReducers({
-        form: formReducer
+        form: formReducer,
+        vip: vipStateReducer
     }),
     composeWithDevTools(
         applyMiddleware(sagaMiddleware)
