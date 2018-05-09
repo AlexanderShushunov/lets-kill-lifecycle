@@ -1,0 +1,1 @@
+export {isVipApiCall} from './isVipApiCall';

@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-    Field,
-    formValues,
-    reduxForm
-} from 'redux-form';
+import {Field, formValues, reduxForm} from 'redux-form';
 import {FormLabel} from '../FormLabel';
 import {CONTACT_FORM_NAME} from './contactFormName';
 
@@ -11,7 +7,7 @@ export const ContactForm = reduxForm({
     form: CONTACT_FORM_NAME
 })(
     formValues('employed')(
-        ({employed}) => (
+        ({employed, isVip}) => (
             <form>
                 <FormLabel text="First Name">
                     <Field
@@ -54,6 +50,12 @@ export const ContactForm = reduxForm({
                         type="text"
                     />
                 </FormLabel>
+                {isVip && (
+                    <div>
+                        If you are a VIP client, call your
+                        manager.
+                    </div>
+                )}
             </form>
         )
     )
