@@ -32,9 +32,11 @@ export class EnhancedContactForm extends React.Component {
     state = {
         isVip: false
     };
+    setStateIsSafe = false;
 
     componentDidMount() {
-        this.fetchIsVip(this.props.firstName);
+        this.setStateIsSafe = true;
+        this.fetchIsVip(this.props.lastName);
     }
 
     componentDidUpdate({
@@ -64,13 +66,24 @@ export class EnhancedContactForm extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        this.setStateIsSafe = false;
+    }
+
     fetchIsVip(lastName) {
         isVipApiCall(lastName).then(isVip =>
-            this.setState({
+            this.safeSetState({
                 isVip
             })
         );
     }
+
+    safeSetState = newState => {
+        if (!this.setStateIsSafe) {
+            return;
+        }
+        this.setState(newState);
+    };
 
     render() {
         return (
