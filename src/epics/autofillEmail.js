@@ -1,27 +1,22 @@
-import {map, filter} from 'rxjs/operators';
+import {
+    map,
+    takeWhile,
+    distinctUntilChanged
+} from 'rxjs/operators';
 import {
     changeEmail,
-    isFirstNameChanging,
+    getFirstName,
     isNotEmailTouched
 } from '../ContactForm';
 
-export const autofillEmail = (action$, state) =>
-    action$.pipe(
-        filter(isFirstNameChanging),
-        map(toChangeEmailAction(state)),
-        filter(Boolean)
+export const autofillEmail = (_, state$) =>
+    state$.pipe(
+        takeWhile(isNotEmailTouched),
+        map(getFirstName),
+        distinctUntilChanged(),
+        map(calcEmail),
+        map(changeEmail)
     );
-
-const toChangeEmailAction = state => ({
-    payload: firstName
-}) => {
-    const shouldAutofill = isNotEmailTouched(
-        state.value
-    );
-    if (shouldAutofill) {
-        return changeEmail(calcEmail(firstName));
-    }
-};
 
 const calcEmail = firstName => {
     if (!firstName) {
