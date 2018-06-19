@@ -11,3 +11,9 @@ export {
     changeEmail,
     changePhone
 } from './actions';
+
+export {
+    isEmployedChanging,
+    isFirstNameChanging,
+    isLastNameChanging
+} from './actionCheckers';
