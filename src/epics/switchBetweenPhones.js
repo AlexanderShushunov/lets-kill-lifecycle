@@ -1,28 +1,20 @@
 import {
     map,
-    filter
+    distinctUntilChanged,
+    pairwise
 } from 'rxjs/operators';
 import {
     changePhone,
-    getPhone,
-    isEmployedChanging
+    getEmployed,
+    getPhone
 } from '../ContactForm';
+import {equal} from '../utils';
 
-const tempValues = {};
-
-export const switchBetweenPhones = (
-    action$,
-    state
-) =>
-    action$.pipe(
-        filter(isEmployedChanging),
-        map(toChangePhoneAction(state))
+export const switchBetweenPhones = (_, state$) =>
+    state$.pipe(
+        distinctUntilChanged(equal, getEmployed),
+        map(getPhone),
+        pairwise(),
+        map(([prev]) => prev || ''),
+        map(changePhone)
     );
-
-const toChangePhoneAction = state => ({
-    meta: {form}
-}) => {
-    const savedPhone = tempValues[form];
-    tempValues[form] = getPhone(state.value);
-    return changePhone(savedPhone || '');
-};
