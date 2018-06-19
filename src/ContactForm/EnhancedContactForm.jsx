@@ -71,11 +71,13 @@ export class EnhancedContactForm extends React.Component {
     }
 
     fetchIsVip(lastName) {
-        isVipApiCall(lastName).then(isVip =>
-            this.safeSetState({
-                isVip
-            })
-        );
+        isVipApiCall(lastName).then(isVip => {
+            if (lastName === this.props.lastName) {
+                this.safeSetState({
+                    isVip
+                });
+            }
+        });
     }
 
     safeSetState = newState => {
