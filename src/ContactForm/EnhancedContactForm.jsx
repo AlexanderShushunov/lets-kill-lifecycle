@@ -2,24 +2,35 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {ContactForm} from './ContactForm';
 import {
+    getEmployed,
     getFirstName,
+    getPhone,
     isNotEmailTouched
 } from './selectors';
-import {changeEmail} from './actions';
+import {
+    changeEmail,
+    changePhone
+} from './actions';
 
 @connect(
     state => ({
         firstName: getFirstName(state),
-        isNotEmailTouched: isNotEmailTouched(state)
+        isNotEmailTouched: isNotEmailTouched(state),
+        employed: getEmployed(state),
+        phone: getPhone(state)
     }),
     {
-        changeEmail
+        changeEmail,
+        changePhone
     }
 )
 export class EnhancedContactForm extends React.Component {
+    tempPhone = '';
+
     componentDidUpdate({
         firstName,
-        isNotEmailTouched
+        isNotEmailTouched,
+        employed
     }) {
         if (this.props.firstName !== firstName) {
             if (isNotEmailTouched) {
@@ -29,6 +40,13 @@ export class EnhancedContactForm extends React.Component {
                     )
                 );
             }
+        }
+        if (this.props.employed !== employed) {
+            this.props.changePhone(
+                this.tempPhone
+            );
+            this.tempPhone =
+                this.props.phone || '';
         }
     }
 
