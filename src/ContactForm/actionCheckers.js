@@ -3,7 +3,7 @@ import {CONTACT_FORM_NAME} from './contactFormName';
 
 const isFieldChangeAction = fieldName => ({
     type,
-    meta: {form, field}
+    meta: {form, field}  = {}
 }) =>
     type === actionTypes.CHANGE &&
     form === CONTACT_FORM_NAME &&
