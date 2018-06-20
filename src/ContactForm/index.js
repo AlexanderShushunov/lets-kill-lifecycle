@@ -1,13 +1,4 @@
-export {ContactForm} from './ContactForm';
-export {
-    getFirstName,
-    getEmployed,
-    getPhone,
-    getLastName,
-    isNotEmailTouched
-} from './selectors';
+import {ContactForm as DumbContactForm} from './ContactForm';
+import {autofillEmail} from './enhancements';
 
-export {
-    changeEmail,
-    changePhone
-} from './actions';
+export const ContactForm = autofillEmail(DumbContactForm);
