@@ -3,7 +3,7 @@
 ## Материалы 
 [Слайды](https://drive.google.com/open?id=1m2Yhx2FGJze91drvaRqTWPmxMZxnqojm) с [OdessaJS 2018](http://odessajs.org/)
 
-Video (is coming soon)
+[Video](https://youtu.be/5PM5c0EUMyE) с [OdessaJS 2018](http://odessajs.org/)
 
 ## Что в репозитории
 С помощью [Redux Form](https://redux-form.com) реализована простая формочка с 5-ю полями.
