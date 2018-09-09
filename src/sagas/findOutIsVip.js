@@ -14,7 +14,7 @@ export function* findOutIsVip() {
     );
 }
 
-function* fetchIsVip({payload: lastName}) {
+export function* fetchIsVip({payload: lastName}) {
     const isVip = yield call(
         isVipApiCall,
         lastName

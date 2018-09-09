@@ -15,7 +15,7 @@ export function* autofillEmail() {
     );
 }
 
-function* worker({payload: firstName}) {
+export function* worker({payload: firstName}) {
     const shouldAutofill = yield select(
         isNotEmailTouched
     );
