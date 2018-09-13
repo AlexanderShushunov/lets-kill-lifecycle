@@ -26,11 +26,13 @@
 ## Ссылки 
  - [Пост](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) об изменении lifecycle в 
  React 17.
+ - [Пост](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state) об неправильном использовании **getDerivedStateFromProps**.
  - [Видео](https://www.youtube.com/watch?v=3J9EJrvqOiM) с Talk from React Amsterdam Conference 2017 и 
    [статья](https://hackernoon.com/how-to-decouple-state-and-ui-a-k-a-you-dont-need-componentwillmount-cc90b787aa37) 
     на Hackernoon от Michel Weststrate (создателя MobX), о разделении представления и логики.
  - [Redux Middleware](https://redux.js.org/advanced/middleware).
- - [RxJS 6](https://github.com/reactivex/rxjs) 
+ - [RxJS 6](https://github.com/reactivex/rxjs).
+ - [Развернутый ответ](https://stackoverflow.com/questions/40021344/why-use-redux-observable-over-redux-saga/40027778#40027778) на stackoverflow, в чем отличие redux-observable и redux-saga.
  - [HOC](https://reactjs.org/docs/higher-order-components.html) - паттерн Higher Order Component.
  - [Выступление](https://www.youtube.com/watch?v=HEqgw16l64Q) Тимофея Ткаченко "componentDidMount не нужен". 
  Еще один способ избавиться от lifecycle 
