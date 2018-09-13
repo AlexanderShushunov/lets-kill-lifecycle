@@ -5,10 +5,13 @@ import 'rxjs/add/operator/switchMap';
 import {getLastName} from '../selectors';
 import {isVipApiCall} from '../../api';
 
-export const findOutIsVip = connect(state$ =>
+export const stateToPropsMapper = state$ =>
     state$
         .map(getLastName)
         .distinctUntilChanged()
         .switchMap(isVipApiCall)
-        .map(isVip => ({isVip}))
+        .map(isVip => ({isVip}));
+
+export const findOutIsVip = connect(
+    stateToPropsMapper
 );

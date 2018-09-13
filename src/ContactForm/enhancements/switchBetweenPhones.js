@@ -9,15 +9,18 @@ import {
 } from '../selectors';
 import {changePhone} from '../actions';
 
+export const stateToPropsMapper = (
+    state$,
+    _,
+    dispatch
+) =>
+    state$
+        .distinctUntilChanged(equal, getEmployed)
+        .map(getPhone)
+        ::prev()
+        ::dispatch(changePhone)
+        .ignoreElements();
+
 export const switchBetweenPhones = connect(
-    (state$, props$, dispatch) =>
-        state$
-            .distinctUntilChanged(
-                equal,
-                getEmployed
-            )
-            .map(getPhone)
-            ::prev()
-            ::dispatch(changePhone)
-            .ignoreElements()
+    stateToPropsMapper
 );

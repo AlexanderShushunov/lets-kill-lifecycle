@@ -16,13 +16,19 @@ const calcEmail = firstName => {
     return `${firstName}@hotmail.com`;
 };
 
+export const stateToPropsMapper = (
+    state$,
+    _,
+    dispatch
+) =>
+    state$
+        .takeWhile(isNotEmailTouched)
+        .map(getFirstName)
+        .distinctUntilChanged()
+        .map(calcEmail)
+        ::dispatch(changeEmail)
+        .ignoreElements();
+
 export const autofillEmail = connect(
-    (state$, props$, dispatch) =>
-        state$
-            .takeWhile(isNotEmailTouched)
-            .map(getFirstName)
-            .distinctUntilChanged()
-            .map(calcEmail)
-            ::dispatch(changeEmail)
-            .ignoreElements()
+    stateToPropsMapper
 );
