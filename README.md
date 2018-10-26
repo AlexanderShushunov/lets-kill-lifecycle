@@ -5,6 +5,8 @@
 
 [Слайды](https://drive.google.com/file/d/1RyaBodMCwcoSTdwsULG5Jsng3eaWU-8h/view?usp=sharing) с [FrontTalks 2018](https://events.yandex.ru/events/fronttalks/2018/?talk=6358)
 
+[Слайды](https://drive.google.com/open?id=1Ds9i9ENOZCmKGRYK2y7aYBtvGQBkaFoR) с [#ITsubbotnik: technological mix 2018 Moscow](https://events.epam.com/events/itsubbotnik-technological-mix/talks/7368)
+
 [Video](https://youtu.be/5PM5c0EUMyE) с [OdessaJS 2018](http://odessajs.org/)
 
 Video с [FrontTalks 2018](http://fronttalks.ru/) is coming soon...
