@@ -28,6 +28,7 @@ Video с [FrontTalks 2018](http://fronttalks.ru/) is coming soon...
 2. [Redux-Saga](https://github.com/redux-saga/redux-saga). Ветка **saga**.
 3. [redux-observable](https://github.com/redux-observable/redux-observable). Ветка **redux-observable**.
 4. [react-redux-rxjs](https://github.com/redneckz/react-redux-rxjs). Ветка **react-redux-rxjs**. Не очень популярная, но очень классная библиотека.
+4. [HOCs](https://reactjs.org/docs/higher-order-components.html). Ветка **hocs**. Решение, которое мы используем в проде.
 
 ## Ссылки 
  - [Пост](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) об изменении lifecycle в 
