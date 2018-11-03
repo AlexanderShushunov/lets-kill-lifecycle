@@ -1,5 +1,7 @@
 import {compose} from 'redux';
 import {ContactForm as DumbContactForm} from './ContactForm';
-import {autofillEmail} from './enhancements';
+import {autofillEmail, switchBetweenPhones} from './enhancements';
 
-export const ContactForm = compose(autofillEmail)(DumbContactForm);
+export const ContactForm = compose(autofillEmail, switchBetweenPhones)(
+    DumbContactForm
+);
