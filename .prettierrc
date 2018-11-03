@@ -3,5 +3,5 @@
   "singleQuote": true,
   "bracketSpacing": false,
   "tabWidth": 4,
-  "printWidth": 50
+  "printWidth": 80
 }
