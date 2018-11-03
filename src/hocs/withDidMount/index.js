@@ -1,0 +1,1 @@
+export {withDidMount} from './withDidMount';

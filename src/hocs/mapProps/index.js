@@ -1,0 +1,1 @@
+export {mapProps} from './mapProps';
