@@ -1,13 +1,1 @@
-export {ContactForm} from './ContactForm';
-export {
-    getFirstName,
-    getEmployed,
-    getPhone,
-    getLastName,
-    isNotEmailTouched
-} from './selectors';
-
-export {
-    changeEmail,
-    changePhone
-} from './actions';
+export {EnhancedContactForm as ContactForm} from './EnhancedContactForm';
