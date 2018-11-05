@@ -1,12 +1,16 @@
 import {connect} from 'react-redux';
 import {compose} from 'redux';
 import {isVipApiCall} from '../../api';
-import {effect} from '../../hocs/effect';
+import {asyncDerivative} from '../../hocs/asynDerivative';
 import {getLastName} from '../selectors';
 
 export const findOutIsVip = compose(
     connect(state => ({
         lastName: getLastName(state)
     })),
-    effect(['lastName'], ({lastName}) => isVipApiCall(lastName), 'isVip')
+    asyncDerivative(
+        ['lastName'],
+        ({lastName}) => isVipApiCall(lastName),
+        'isVip'
+    )
 );

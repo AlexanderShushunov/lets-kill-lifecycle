@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {makeOperationOnProps} from './effect';
+import {makeOperationOnProps} from './asyncDerivative';
 
 describe('makeOperationOnProps', () => {
     test('should invoke operation with rights params', () => {

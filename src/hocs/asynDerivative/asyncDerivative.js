@@ -5,15 +5,19 @@ import {mapProps} from '../mapProps/index';
 import {onChange} from '../onChange/index';
 import {withDidMount} from '../withDidMount/index';
 
-export const effect = (propNames, operation, resultPropName) => Component => {
+export const asyncDerivative = (
+    propNames,
+    operation,
+    resultPropName
+) => Component => {
     const operationOnProps = makeOperationOnProps(propNames, operation);
     return compose(
-        withState('result', 'setResult'),
+        withState(resultPropName, 'setResult'),
         withDidMount(operationOnProps),
         onChange(propNames, operationOnProps),
-        mapProps(({result, setResult, ...otherProps}) => ({
-            ...otherProps,
-            [resultPropName]: result
+        // cut setResult
+        mapProps(({setResult, ...otherProps}) => ({
+            ...otherProps
         }))
     )(Component);
 };
