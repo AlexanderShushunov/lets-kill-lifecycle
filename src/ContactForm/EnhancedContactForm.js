@@ -1,20 +1,23 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {connect} from 'react-redux';
 import {ContactForm} from './ContactForm';
 import {
     getEmployed,
     getFirstName,
+    getLastName,
     getPhone,
     isNotEmailTouched
 } from './selectors';
 import {changeEmail, changePhone} from './actions';
+import {isVipApiCall} from '../api';
 
 export const EnhancedContactForm = connect(
     state => ({
         firstName: getFirstName(state),
         isNotEmailTouched: isNotEmailTouched(state),
         employed: getEmployed(state),
-        phone: getPhone(state)
+        phone: getPhone(state),
+        lastName: getLastName(state)
     }),
     {
         changeEmail,
@@ -27,7 +30,8 @@ export const EnhancedContactForm = connect(
         isNotEmailTouched,
         employed,
         phone,
-        changePhone
+        changePhone,
+        lastName
     }) => {
         useEffect(
             () => {
@@ -46,7 +50,22 @@ export const EnhancedContactForm = connect(
             },
             [employed]
         );
-        return <ContactForm />;
+
+        const [isVip, setIsVip] = useState(false);
+        useEffect(
+            () => {
+                let changedAfterOrUnmounted = false;
+                isVipApiCall(lastName).then(isVip => {
+                    if (!changedAfterOrUnmounted) {
+                        setIsVip(isVip);
+                    }
+                });
+                return () => (changedAfterOrUnmounted = true);
+            },
+            [lastName]
+        );
+
+        return <ContactForm isVip={isVip} />;
     }
 );
 
