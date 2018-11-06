@@ -6844,6 +6844,10 @@ url@^0.11.0:
     punycode "1.3.2"
     querystring "0.2.0"
 
+use-substate@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/use-substate/-/use-substate-0.0.2.tgz#8c97230fe5d237bed3d5d48afe00aad1d263722c"
+
 use@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.0.tgz#14716bf03fdfefd03040aef58d8b4b85f3a7c544"
