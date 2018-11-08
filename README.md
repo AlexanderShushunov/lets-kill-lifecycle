@@ -1,15 +1,28 @@
 # Репозиторий с материалами доклада "LET'S KILL LIFECYCLE"
 
 ## Материалы 
-[Слайды](https://drive.google.com/open?id=1m2Yhx2FGJze91drvaRqTWPmxMZxnqojm) с [OdessaJS 2018](http://odessajs.org/)
+### [OdessaJS 2018](http://odessajs.org/)
+[Слайды](https://drive.google.com/open?id=1m2Yhx2FGJze91drvaRqTWPmxMZxnqojm)
 
-[Слайды](https://drive.google.com/file/d/1RyaBodMCwcoSTdwsULG5Jsng3eaWU-8h/view?usp=sharing) с [FrontTalks 2018](https://events.yandex.ru/events/fronttalks/2018/?talk=6358)
+[Video](https://youtu.be/5PM5c0EUMyE)
 
-[Слайды](https://drive.google.com/open?id=1Ds9i9ENOZCmKGRYK2y7aYBtvGQBkaFoR) с [#ITsubbotnik: technological mix 2018 Moscow](https://events.epam.com/events/itsubbotnik-technological-mix/talks/7368)
+### [FrontTalks 2018](https://events.yandex.ru/lib/talks/6358/)
+[Слайды](https://drive.google.com/file/d/1RyaBodMCwcoSTdwsULG5Jsng3eaWU-8h/view?usp=sharing) 
 
-[Video](https://youtu.be/5PM5c0EUMyE) с [OdessaJS 2018](http://odessajs.org/)
+Video с is coming soon...
 
-Video с [FrontTalks 2018](http://fronttalks.ru/) is coming soon...
+### [#ITsubbotnik: technological mix 2018 Moscow](https://events.epam.com/events/itsubbotnik-technological-mix/talks/7368)
+[Слайды](https://drive.google.com/open?id=1Ds9i9ENOZCmKGRYK2y7aYBtvGQBkaFoR)
+
+Video с is coming soon...
+
+### [#ITsubbotnik: technological mix 2018 Izhevsk](https://events.epam.com/events/epam-itsubbotnik-conference-izhevsk/talks/7553)
+
+_Тут я про hook'и чуть-чуть зацепил_
+
+[Слайды](https://drive.google.com/file/d/1DzP_YNLxx1m7ZxrZokZNAkUs4WszuPpm/view?usp=sharing)  
+
+Video с is coming soon...
 
 ## Что в репозитории
 С помощью [Redux Form](https://redux-form.com) реализована простая формочка с 5-ю полями.
@@ -28,7 +41,9 @@ Video с [FrontTalks 2018](http://fronttalks.ru/) is coming soon...
 2. [Redux-Saga](https://github.com/redux-saga/redux-saga). Ветка **saga**.
 3. [redux-observable](https://github.com/redux-observable/redux-observable). Ветка **redux-observable**.
 4. [react-redux-rxjs](https://github.com/redneckz/react-redux-rxjs). Ветка **react-redux-rxjs**. Не очень популярная, но очень классная библиотека.
-4. [HOCs](https://reactjs.org/docs/higher-order-components.html). Ветка **hocs**. Решение, которое мы используем в проде.
+5. [HOCs](https://reactjs.org/docs/higher-order-components.html). Ветка **hocs**. Решение, которое мы используем в проде.
+6. [Hooks](https://reactjs.org/docs/hooks-intro.html). Ветка **hooks**. Свежее (на ноябрь 2018) решение от 
+   команды React.
 
 ## Ссылки 
  - [Пост](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) об изменении lifecycle в 
