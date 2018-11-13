@@ -9,7 +9,7 @@
 ### [FrontTalks 2018](https://events.yandex.ru/lib/talks/6358/)
 [Слайды](https://drive.google.com/file/d/1RyaBodMCwcoSTdwsULG5Jsng3eaWU-8h/view?usp=sharing) 
 
-Video с is coming soon...
+[Video](https://youtu.be/rQ2EIOnhPPg)
 
 ### [#ITsubbotnik: technological mix 2018 Moscow](https://events.epam.com/events/itsubbotnik-technological-mix/talks/7368)
 [Слайды](https://drive.google.com/open?id=1Ds9i9ENOZCmKGRYK2y7aYBtvGQBkaFoR)
