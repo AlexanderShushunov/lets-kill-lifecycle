@@ -46,6 +46,7 @@ Video с is coming soon...
    команды React.
 
 ## Ссылки 
+ - [Tver.IO](https://tver.io/) - Сообщество Тверских айтишников. You are welcome :)
  - [Пост](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html) об изменении lifecycle в 
  React 17.
  - [Пост](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state) об неправильном использовании **getDerivedStateFromProps**.
