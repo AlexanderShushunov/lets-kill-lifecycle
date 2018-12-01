@@ -24,6 +24,13 @@ _Тут я про hook'и чуть-чуть зацепил_
 
 Video с is coming soon...
 
+### 🔥[JSNN #11](https://www.it52.info/events/2018-11-24-jsnn-11)🔥
+
+[Слайды](https://drive.google.com/file/d/1C2Urx3eg39Igd_j4ybt4EFtzfrg73AqB/view?usp=sharing) 
+
+[Video](https://www.youtube.com/watch?v=n5hlF9qVH1k)
+
+
 ## Что в репозитории
 С помощью [Redux Form](https://redux-form.com) реализована простая формочка с 5-ю полями.
 Дополнительные требования:
