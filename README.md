@@ -14,7 +14,7 @@
 ### [#ITsubbotnik: technological mix 2018 Moscow](https://events.epam.com/events/itsubbotnik-technological-mix/talks/7368)
 [Слайды](https://drive.google.com/open?id=1Ds9i9ENOZCmKGRYK2y7aYBtvGQBkaFoR)
 
-Video с is coming soon...
+[Video](https://www.youtube.com/watch?v=ybu9BlEKS9c)
 
 ### [#ITsubbotnik: technological mix 2018 Izhevsk](https://events.epam.com/events/epam-itsubbotnik-conference-izhevsk/talks/7553)
 
